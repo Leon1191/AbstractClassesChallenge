@@ -3,7 +3,21 @@ package com.alex;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+//	ConcreteClassFromListItemClass test1 = new ConcreteClassFromListItemClass(1);
+//	ConcreteClassFromListItemClass test2 = new ConcreteClassFromListItemClass(20);
+//        System.out.println(test1.compareTo(test2));
+
+MyOwnLinkedList list = new MyOwnLinkedList(null);
+
+
+            String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+
+    String[] data = stringData.split(" ");
+        for (String s : data) {
+            list.addNewItem(new ConcreteClassFromListItemClass(s));
+        }
+        list.printList();
+
     }
 }
     // For this challenge, create an abstract class to define items that can be stored in a list.
@@ -64,6 +78,7 @@ public class Main {
 //
 //    String[] data = stringData.split(" ");
 //        for (String s : data) {
+//        }
 
 
             // create new item with value set to the string s
