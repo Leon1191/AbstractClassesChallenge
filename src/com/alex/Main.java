@@ -10,13 +10,22 @@ public class Main {
 MyOwnLinkedList list = new MyOwnLinkedList(null);
 
 
-            String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+//            String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+        String stringData = "1 5 2 3 4 7 6 8 9 0";
 
     String[] data = stringData.split(" ");
         for (String s : data) {
             list.addNewItem(new ConcreteClassFromListItemClass(s));
         }
         list.printList();
+        stringData = "1 5 2 3 4 7 6 8 9 0";
+
+        data = stringData.split(" ");
+        for (String s : data) {
+            list.deleteItem(s);
+            list.printList();
+        }
+
 
     }
 }
